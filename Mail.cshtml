@@ -1,0 +1,25 @@
+﻿@inherits RazorEngine.Templating.TemplateBase<MercariChecker.MercariModel>
+
+<html>
+@foreach (var item in @Model.Items)
+{
+<table border='0'>
+  <tr>
+    <td>
+      <a href="@(item.DetailUrl)">@(item.Name)</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="@(item.ImgUrl)">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      @(item.Price)[@(item.Keyword)]
+    </td>
+  </tr>
+</table>
+<hr>
+}
+</html>
